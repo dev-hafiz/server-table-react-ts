@@ -4,7 +4,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { fetchArtworks } from "../service/artworkService";
 import { Artwork } from "../types";
-import { Accordion, AccordionTab } from "primereact/accordion";
+import Collapsible from "./Collapsible";
 
 const ArtworkTable: React.FC = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
@@ -34,6 +34,17 @@ const ArtworkTable: React.FC = () => {
     setSelectedArtworks(selected);
   };
 
+  const selectRowsBasedOnInput = (count: number) => {
+    const newSelectedArtworks = artworks.slice(0, count);
+    setSelectedArtworks(newSelectedArtworks);
+  };
+
+  const header = (
+    <div style={{ position: "relative" }}>
+      <Collapsible onSelectRows={selectRowsBasedOnInput} />
+    </div>
+  );
+
   return (
     <div>
       <DataTable
@@ -51,6 +62,7 @@ const ArtworkTable: React.FC = () => {
         dataKey="id"
         selectionMode="checkbox"
         tableStyle={{ minWidth: "50rem" }}
+        header={header}
       >
         <Column selectionMode="multiple" />
         <Column field="title" header="Title" />
