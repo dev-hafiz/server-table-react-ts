@@ -1,4 +1,9 @@
 /* styles.css */
+
+.table-container{
+  width: 80%;
+  margin: 0 auto;
+}
 .collapsible-container {
   position: absolute;
   top: 0;

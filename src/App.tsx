@@ -5,9 +5,9 @@ import ArtworkTable from "./components/DataTable";
 
 function App() {
   return (
-    <>
+    <div className="table-container">
       <ArtworkTable />
-    </>
+    </div>
   );
 }
 
