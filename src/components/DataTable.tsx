@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
@@ -30,19 +31,20 @@ const ArtworkTable: React.FC = () => {
   };
 
   // Handle selection of rows (checkboxes)
-  interface RowSelectionEvent {
-    value: Artwork[];
-  }
-
-  const handleRowSelection = (event: RowSelectionEvent) => {
-    const selectedIds = new Set<number>(event.value.map((item) => item.id));
+  const handleRowSelection = (event: any) => {
+    const selectedRows = event.value as Artwork[];
+    const selectedIds = new Set<number>(selectedRows.map((item) => item.id));
 
     setSelectedRowIds((prevSelected) => {
       const newSelected = new Set(prevSelected);
 
-      // Add new selected row IDs to the current selection (without toggling)
-      selectedIds.forEach((id) => {
-        newSelected.add(id);
+      // Toggle selected row IDs
+      artworks.forEach((row) => {
+        if (selectedIds.has(row.id)) {
+          newSelected.add(row.id);
+        } else {
+          newSelected.delete(row.id);
+        }
       });
 
       return newSelected;
