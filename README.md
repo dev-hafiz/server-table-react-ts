@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# 𝐑𝐞𝐚𝐜𝐭 𝐀𝐫𝐭 𝐓𝐚𝐛𝐥𝐞 𝐰𝐢𝐭𝐡 𝐒𝐞𝐫𝐯𝐞𝐫-𝐒𝐢𝐝𝐞 𝐏𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐨𝐧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with TypeScript and Vite that displays a table of artwork data. It utilizes PrimeReact's DataTable component for data visualization and user interaction.
 
-Currently, two official plugins are available:
+[🚀 𝐋𝐢𝐯𝐞 𝐃𝐞𝐦𝐨]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚡𝐊𝐞𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬
 
-## Expanding the ESLint configuration
+- 𝐒𝐞𝐫𝐯𝐞𝐫-𝐒𝐢𝐝𝐞 𝐏𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧: Fetches data from the API for the current page on user interaction, preventing memory issues.
+- 𝐂𝐮𝐬𝐭𝐨𝐦 𝐑𝐨𝐰 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐨𝐧: Allows users to select individual or all rows, with persistence across page changes.
+- 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐰𝐢𝐭𝐡 𝐓𝐲𝐩𝐞𝐒𝐜𝐫𝐢𝐩𝐭: Ensures code type safety and improves maintainability.
+- 𝐁𝐮𝐢𝐥𝐭 𝐰𝐢𝐭𝐡 𝐕𝐢𝐭𝐞: Leverages Vite's fast build times and development server.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+### ⚡𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 𝐔𝐬𝐞𝐝
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 𝐑𝐞𝐚𝐜𝐭𝐉𝐒: Frontend framework for building user interfaces.
+- 𝐓𝐲𝐩𝐞𝐒𝐜𝐫𝐢𝐩𝐭: Superset of JavaScript for type safety and improved development experience.
+- 𝐕𝐢𝐭𝐞: Build tool for fast development and bundling.
+- 𝐏𝐫𝐢𝐦𝐞𝐑𝐞𝐚𝐜𝐭: UI component library for React, including the DataTable component.
+- Netlify: Deploy project for Live Demo url 
+
+
+⚙️ 𝐆𝐞𝐭𝐭𝐢𝐧𝐠 𝐒𝐭𝐚𝐫𝐭𝐞𝐝
+
+✅ 𝐏𝐫𝐞𝐫𝐞𝐪𝐮𝐢𝐬𝐢𝐭𝐞𝐬
+
+- Node.js (version 14 or later)
+- npm (package manager) or yarn (alternative package manager)
+
+#### Installation
+
+1. Clone the repository:
+
+```git clone https://github.com/dev-hafiz/server-table-react-ts.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```cd projectName
 ```
+
+3. Install dependencies:
+
+```npm install
+```
+
+4. Start the development server:
+
+```npm run dev
+```
+
+5. View in the browser:
+
+The application will be available at http://localhost:5173. Open this URL in your browser to see the art table.
+
+
+
+𝑨𝒖𝒕𝒉𝒐𝒓 | 𝑯𝒂𝒇𝒊𝒛𝒖𝒓
+
+
+
+
