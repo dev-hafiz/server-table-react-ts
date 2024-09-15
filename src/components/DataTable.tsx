@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
@@ -14,6 +13,7 @@ const ArtworkTable: React.FC = () => {
   const [rowsPerPage, setRowsPerPage] = useState(12);
   const [totalRecords, setTotalRecords] = useState(0);
 
+  // Fetch artworks on page or rowsPerPage change
   useEffect(() => {
     setLoading(true);
     fetchArtworks(page + 1).then((data) => {
@@ -23,22 +23,36 @@ const ArtworkTable: React.FC = () => {
     });
   }, [page, rowsPerPage]);
 
+  // Handle pagination changes
   const onPageChange = (event: any) => {
     setPage(event.page);
     setRowsPerPage(event.rows);
   };
 
-  // Define a type for the event.value
+  // Handle selection of rows (checkboxes)
   interface RowSelectionEvent {
     value: Artwork[];
   }
 
   const handleRowSelection = (event: RowSelectionEvent) => {
-    // Ensure the type of event.value is Artwork[] and item.id is number
     const selectedIds = new Set<number>(event.value.map((item) => item.id));
-    setSelectedRowIds(selectedIds);
+
+    setSelectedRowIds((prevSelected) => {
+      const newSelected = new Set(prevSelected);
+
+      // Add new selected row IDs to the current selection (without toggling)
+      selectedIds.forEach((id) => {
+        newSelected.add(id);
+      });
+
+      return newSelected;
+    });
   };
 
+  // Ensure selected rows persist across pages
+  const isRowSelected = (rowId: number): boolean => selectedRowIds.has(rowId);
+
+  // Programmatically select rows
   const selectRowsBasedOnInput = async (count: number) => {
     const rowsToSelect: Artwork[] = [];
     let totalSelected = selectedRowIds.size;
@@ -81,8 +95,6 @@ const ArtworkTable: React.FC = () => {
     processPages();
   };
 
-  const isRowSelected = (rowId: number): boolean => selectedRowIds.has(rowId);
-
   const header = (
     <div style={{ position: "relative", top: 34, left: 30 }}>
       <Collapsible onSelectRows={selectRowsBasedOnInput} />
@@ -101,10 +113,10 @@ const ArtworkTable: React.FC = () => {
         totalRecords={totalRecords}
         lazy
         onPage={onPageChange}
-        selection={artworks.filter((row) => isRowSelected(row.id))}
+        selection={artworks.filter((row) => isRowSelected(row.id))} // Ensure that only rows in the current page that are selected are highlighted
         onSelectionChange={handleRowSelection}
         dataKey="id"
-        selectionMode="checkbox"
+        selectionMode="multiple"
         tableStyle={{ minWidth: "50rem" }}
         header={header}
       >

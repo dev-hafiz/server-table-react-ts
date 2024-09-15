@@ -1,8 +1,8 @@
-# 𝐑𝐞𝐚𝐜𝐭 𝐀𝐫𝐭 𝐓𝐚𝐛𝐥𝐞 𝐰𝐢𝐭𝐡 𝐒𝐞𝐫𝐯𝐞𝐫-𝐒𝐢𝐝𝐞 𝐏𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐨𝐧
+# 𝐑𝐞𝐚𝐜𝐭 𝐀𝐫𝐭 𝐓𝐚𝐛𝐥𝐞 𝐰𝐢𝐭𝐡 𝐒𝐞𝐫𝐯𝐞𝐫-𝐒𝐢𝐝𝐞 𝐏𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐨𝐧 [🚀 𝐋𝐢𝐯𝐞 𝐃𝐞𝐦𝐨](https://data-table-task.netlify.app/)
 
 This project is a React application built with TypeScript and Vite that displays a table of artwork data. It utilizes PrimeReact's DataTable component for data visualization and user interaction.
 
-[🚀 𝐋𝐢𝐯𝐞 𝐃𝐞𝐦𝐨]()
+[🚀 𝐋𝐢𝐯𝐞 𝐃𝐞𝐦𝐨](https://data-table-task.netlify.app/)
 
 ### ⚡𝐊𝐞𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬
 
@@ -61,7 +61,7 @@ npm run dev
 5. View in the browser:
 
 The application will be available at http://localhost:5173. Open this URL in your browser to see the art table.
-
+[🚀 𝐋𝐢𝐯𝐞 𝐃𝐞𝐦𝐨](https://data-table-task.netlify.app/)
 
 
 𝑨𝒖𝒕𝒉𝒐𝒓 | 𝑯𝒂𝒇𝒊𝒛𝒖𝒓
