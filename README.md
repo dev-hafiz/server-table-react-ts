@@ -32,22 +32,30 @@ This project is a React application built with TypeScript and Vite that displays
 
 1. Clone the repository:
 
-```git clone https://github.com/dev-hafiz/server-table-react-ts.git
+```
+git clone https://github.com/dev-hafiz/server-table-react-ts.git
+
 ```
 
 2. Navigate to the project directory:
 
-```cd projectName
+```
+cd projectName
+
 ```
 
 3. Install dependencies:
 
-```npm install
+```
+npm install
+
 ```
 
 4. Start the development server:
 
-```npm run dev
+```
+npm run dev
+
 ```
 
 5. View in the browser:
