@@ -1,14 +1,14 @@
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import ArtworkTable from "./components/DataTable";
 
 function App() {
-
   return (
     <>
-    
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ArtworkTable />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
